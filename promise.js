@@ -6,9 +6,9 @@ const promiseOutput = async (emosi) => {
     let theater1 = await promiseTheaterIXX();
     let theater2 = await promiseTheaterVGC();
     let hasil = (await theater1).concat(await theater2);
-    let emosi = 0;
-    hasil.map((theater1) => theater1.hasil === emosi && (emosi += 1));
-    return emosi;
+    let jumlahEmosi = 0;
+    hasil.map((theater1) => theater1.hasil === emosi && (jumlahEmosi += 1));
+    return jumlahEmosi;
   } catch (error) {
     console.error(error);
   }
